@@ -1,6 +1,6 @@
 package com;
 
-public class ToyDuck extends Duck implements Quack {
+public class ToyDuck extends Duck {
     @Override
     public void quack() {
         System.out.println("Squeak");

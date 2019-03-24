@@ -1,5 +1,6 @@
 import com.Duck;
 import com.ToyDuck;
+import com.WildDuck;
 import singleton.ClientAndroid;
 
 public class Main {
@@ -17,15 +18,15 @@ public class Main {
         // endregion
 
         // region Ducks
-        Duck duck = new Duck();
+        Duck duck = new WildDuck();
         System.out.println(duck);
-        duck.fly();
-        duck.quack();
+        duck.performFly();
+        duck.performQuack();
 
         ToyDuck toyDuck = new ToyDuck();
         System.out.println(toyDuck);
-        toyDuck.fly();
-        toyDuck.quack();
+        toyDuck.performFly();
+        toyDuck.performQuack();
         //endregion
 
     }

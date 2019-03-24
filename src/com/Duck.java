@@ -1,13 +1,7 @@
 package com;
 
-public class Duck {
-    public void quack() {
-        System.out.println("Quack quack");
-    }
+public abstract class Duck {
 
-    public void fly() {
-        System.out.println("I am flying");
-    }
 
     @Override
     public String toString() {

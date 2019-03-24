@@ -21,7 +21,7 @@ public class Main {
         clientAndroid.addToFavorites("Dumbo");
         // endregion
 
-        // region Ducks
+        // region [Strategy Pattern]
         Duck duck = new WildDuck();
         System.out.println(duck);
 

@@ -1,4 +1,6 @@
-package com;
+package com.behaviors.flying;
+
+import com.behaviors.Fly;
 
 public class FlyingDuckBehavior implements Fly {
     public void fly() {

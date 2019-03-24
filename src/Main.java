@@ -1,6 +1,10 @@
-import com.Duck;
-import com.ToyDuck;
-import com.WildDuck;
+import com.behaviors.flying.FlyingDuckBehavior;
+import com.behaviors.flying.NonFlyingDuckBehavior;
+import com.behaviors.quacking.SqueakBehavior;
+import com.model.Duck;
+import com.behaviors.quacking.QuackingDuckBehavior;
+import com.model.concrete.ToyDuck;
+import com.model.concrete.WildDuck;
 import singleton.ClientAndroid;
 
 public class Main {
@@ -20,12 +24,19 @@ public class Main {
         // region Ducks
         Duck duck = new WildDuck();
         System.out.println(duck);
+
+        duck.setFlyingDuckBehavior(new FlyingDuckBehavior());
+        duck.setQuackingDuckBehavior(new QuackingDuckBehavior());
         duck.performFly();
         duck.performQuack();
+        duck.setFlyingDuckBehavior(new NonFlyingDuckBehavior());
+        duck.performFly();
 
         ToyDuck toyDuck = new ToyDuck();
         System.out.println(toyDuck);
         toyDuck.performFly();
+        toyDuck.performQuack();
+        toyDuck.setQuackingDuckBehavior(new SqueakBehavior());
         toyDuck.performQuack();
         //endregion
 
